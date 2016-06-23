@@ -1,0 +1,352 @@
+Started by timer
+[EnvInject] - Loading node environment variables.
+Building on master in workspace /var/lib/jenkins/jobs/sso-automation/workspace
+ > /usr//bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr//bin/git config remote.origin.url git@10.192.214.128:qa/sso-automation.git # timeout=10
+Fetching upstream changes from git@10.192.214.128:qa/sso-automation.git
+ > /usr//bin/git --version # timeout=10
+using GIT_SSH to set credentials 
+ > /usr//bin/git -c core.askpass=true fetch --tags --progress git@10.192.214.128:qa/sso-automation.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision 1b153596e122299223e1e2c7c74a1cd4c7ea5f59 (origin/master)
+ > /usr//bin/git config core.sparsecheckout # timeout=10
+ > /usr//bin/git checkout -f 1b153596e122299223e1e2c7c74a1cd4c7ea5f59
+ > /usr//bin/git rev-list 1b153596e122299223e1e2c7c74a1cd4c7ea5f59 # timeout=10
+No emails were triggered.
+[workspace] $ /bin/sh -xe /tmp/hudson5671015867330043736.sh
++ export DISPLAY=:99
++ mvn -B clean test
++ firefox
+
+(process:10217): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed
+Xlib:  extension "RANDR" missing on display ":99".
+console.error: 
+  [CustomizableUI]
+  Custom widget with id loop-button does not return a valid node
+console.error: 
+  [CustomizableUI]
+  Custom widget with id loop-button does not return a valid node
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for voa.8x8:voa_automation:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 71, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building MyMavenProject_VOA 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ voa_automation ---
+[INFO] Deleting /srv/jenkins/jobs/sso-automation/workspace/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:resources (default-resources) @ voa_automation ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /srv/jenkins/jobs/sso-automation/workspace/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ voa_automation ---
+[INFO] Compiling 2 source files to /srv/jenkins/jobs/sso-automation/workspace/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.3:testResources (default-testResources) @ voa_automation ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /srv/jenkins/jobs/sso-automation/workspace/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ voa_automation ---
+[INFO] Compiling 2 source files to /srv/jenkins/jobs/sso-automation/workspace/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ voa_automation ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Total Time taken to login into USA server using USA Admin credentials : 1 Seconds
+Total Time taken to login into USA server using USA User credentials : 1 Seconds
+Total Time taken to login into USA server using UK Admin credentials : 1 Seconds
+Total Time taken to login into USA server using UK User credentials : 1 Seconds
+Total Time taken to login into USA server using AUS Admin credentials : 1 Seconds
+Total Time taken to login into USA server using AUS User credentials : 1 Seconds
+Tests run: 24, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 112.603 sec <<< FAILURE! - in TestSuite
+Login_With_USA_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.024 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 11 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c8a69ab1-5953-48a3-a291-b63a3eeafd83
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_USA_Admin_Credentials(Login_Aus.java:36)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_USA_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.015 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dd02a0ff-4208-411d-88cd-c1404b804920
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_USA_Admin_Credentials(Login_Aus.java:53)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Login_With_USA_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.015 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: cfa761b9-4d5e-4afb-98c4-06c7020de785
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_USA_User_Credentials(Login_Aus.java:73)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_USA_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.013 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 11 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ad24ca1e-68ce-465c-8b18-a23b047e654a
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_USA_User_Credentials(Login_Aus.java:88)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Login_With_UK_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.018 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 16 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 22424750-a317-485a-9fef-508d4eeeca4d
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_UK_Admin_Credentials(Login_Aus.java:103)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_UK_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.015 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 14 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 12ab90cc-7cbb-4003-980f-37a8b7b2aa8a
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_UK_Admin_Credentials(Login_Aus.java:117)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Login_With_UK_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.017 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 15 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0d3b9f05-3ef0-4fa9-8cf2-ed57476aa13b
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_UK_User_Credentials(Login_Aus.java:132)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_UK_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.014 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 04dabb20-d97a-49ca-a58d-e741fd6bd47a
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_UK_User_Credentials(Login_Aus.java:147)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Login_With_AUS_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.014 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 98dd1235-e7e5-4a90-84d3-27755b71aba6
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_AUS_Admin_Credentials(Login_Aus.java:162)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_AUS_Admin_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.011 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4763139d-a03d-4082-aa84-8e608ac89280
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_AUS_Admin_Credentials(Login_Aus.java:177)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Login_With_AUS_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.014 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6dd7e790-b531-443f-ae99-19aa5ed6c2be
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Login_With_AUS_User_Credentials(Login_Aus.java:192)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+Time_to_Login_With_AUS_User_Credentials(sso.automation._8x8.production.Login_Aus)  Time elapsed: 0.013 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.4.0, platform=LINUX, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 56b5c30b-fc3b-4ad0-b185-7f4ea21a2237
+*** Element info: {Using=name, value=username}
+	at sso.automation._8x8.production.Login_Aus.Time_to_Login_With_AUS_User_Credentials(Login_Aus.java:206)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: {"method":"name","selector":"username"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'jenkins01', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-4-amd64', java.version: '1.8.0_05'
+Driver info: driver.version: unknown
+
+
+Results :
+
+Failed tests: 
+  Login_Aus.Login_With_AUS_Admin_Credentials:162 » NoSuchElement Unable to locat...
+  Login_Aus.Login_With_AUS_User_Credentials:192 » NoSuchElement Unable to locate...
+  Login_Aus.Login_With_UK_Admin_Credentials:103 » NoSuchElement Unable to locate...
+  Login_Aus.Login_With_UK_User_Credentials:132 » NoSuchElement Unable to locate ...
+  Login_Aus.Login_With_USA_Admin_Credentials:36 » NoSuchElement Unable to locate...
+  Login_Aus.Login_With_USA_User_Credentials:73 » NoSuchElement Unable to locate ...
+  Login_Aus.Time_to_Login_With_AUS_Admin_Credentials:177 » NoSuchElement Unable ...
+  Login_Aus.Time_to_Login_With_AUS_User_Credentials:206 » NoSuchElement Unable t...
+  Login_Aus.Time_to_Login_With_UK_Admin_Credentials:117 » NoSuchElement Unable t...
+  Login_Aus.Time_to_Login_With_UK_User_Credentials:147 » NoSuchElement Unable to...
+  Login_Aus.Time_to_Login_With_USA_Admin_Credentials:53 » NoSuchElement Unable t...
+  Login_Aus.Time_to_Login_With_USA_User_Credentials:88 » NoSuchElement Unable to...
+
+Tests run: 24, Failures: 12, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1:54.736s
+[INFO] Finished at: Sun Mar 06 04:37:56 UTC 2016
+[INFO] Final Memory: 17M/105M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19:test (default-test) on project voa_automation: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /srv/jenkins/jobs/sso-automation/workspace/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Process leaked file descriptors. See http://wiki.jenkins-ci.org/display/JENKINS/Spawning+processes+from+build for more information
+Build step 'Execute shell' marked build as failure
+TestNG Reports Processing: START
+Looking for TestNG results report in workspace using pattern: **/testng-results.xml
+testng-results.xml was last modified before this build started. Ignoring it.
+Saving reports...
+Processing '/var/lib/jenkins/jobs/sso-automation/builds/12767/testng/testng-results.xml'
+Failed Tests/Configs found. Marking build as UNSTABLE.
+TestNG Reports Processing: FINISH
+Email was triggered for: Failure - 2nd
+Trigger Failure - Any was overridden by another trigger and will not send an email.
+Trigger Failure - Still was overridden by another trigger and will not send an email.
+Sending email for trigger: Failure - 2nd
+Sending email to: qateam@8x8.com vo-ops@8x8.com vodev@8x8.com sysops-team@8x8.com
